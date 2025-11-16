@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: #171717;
+    color: #fafafa;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  /* Custom optical adjustments */
+  .optical-scale {
+    transform: scale(1.02);
+  }
+
+  /* Refined leading for display type */
+  .leading-display {
+    line-height: 0.95;
+  }
+
+  /* Rhythm utilities */
+  .rhythm-tight {
+    line-height: 1.3;
+    margin-bottom: 0.5em;
+  }
+
+  .rhythm-normal {
+    line-height: 1.6;
+    margin-bottom: 1em;
+  }
+
+  .rhythm-loose {
+    line-height: 2;
+    margin-bottom: 1.5em;
+  }
+}
